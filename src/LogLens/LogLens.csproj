@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>loglens</AssemblyName>
+    <RootNamespace>LogLens</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>Angelo Paris</Authors>
+    <Description>Rule-based log analyzer for support engineers: finds known failure patterns and produces Markdown/HTML/JSON reports.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="rules.sample.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+2026-10-28 08:00:01,120 INFO  [main] com.example.inventory.Server - Server is starting (version 3.4.1)
+2026-10-28 08:00:03,455 INFO  [main] com.example.inventory.Db - Connected to database inventory on db01:5432
+2026-10-28 08:00:04,002 INFO  [poller-1] com.example.inventory.Snmp - Polling 248 devices
+2026-10-28 08:05:12,310 WARN  [poller-3] com.example.inventory.Snmp - SNMP request to 10.20.1.15 timed out after 5000 ms
+2026-10-28 08:05:42,318 WARN  [poller-3] com.example.inventory.Snmp - SNMP request to 10.20.1.16 timed out after 5000 ms
+2026-10-28 08:06:01,004 WARN  [poller-2] com.example.inventory.Snmp - SNMPv3 report usmStatsUnknownEngineIDs from 10.20.4.2
+2026-10-28 08:10:15,777 ERROR [export-1] com.example.inventory.Export - Export to https://reports.example.local failed
+javax.net.ssl.SSLHandshakeException: PKIX path building failed: unable to find valid certification path to requested target
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:371)
+	... 12 more
+2026-10-28 08:12:40,101 ERROR [sync-1] com.example.inventory.Sync - Cannot reach api.partner.example: java.net.UnknownHostException: api.partner.example
+2026-10-28 08:15:00,000 INFO  [scheduler] com.example.inventory.Jobs - Nightly cleanup scheduled
+2026-10-28 08:20:33,640 ERROR [db-pool] com.example.inventory.Db - org.postgresql.util.PSQLException: Connection refused. Check that the hostname and port are correct
+2026-10-28 08:20:43,652 ERROR [db-pool] com.example.inventory.Db - org.postgresql.util.PSQLException: Connection refused. Check that the hostname and port are correct
+2026-10-28 08:20:53,660 ERROR [db-pool] com.example.inventory.Db - org.postgresql.util.PSQLException: Connection refused. Check that the hostname and port are correct
+2026-10-28 08:31:09,914 WARN  [gc] com.example.inventory.Health - Old generation usage at 93%
+2026-10-28 08:33:47,226 FATAL [poller-4] com.example.inventory.Snmp - Unrecoverable error in poller thread
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:3236)
+	at com.example.inventory.Snmp.walk(Snmp.java:212)
+Caused by: java.lang.IllegalStateException: buffer allocation failed
+2026-10-28 08:34:02,005 ERROR [writer] com.example.inventory.Archive - Failed to write /var/opt/inventory/archive/run-7781.dat: No space left on device
+2026-10-28 08:35:10,500 INFO  [main] com.example.inventory.Server - Server shutting down

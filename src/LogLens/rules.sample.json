@@ -1,0 +1,18 @@
+// Custom LogLens rules. Load with: loglens <log> --rules rules.sample.json
+// severity: Trace | Debug | Info | Warning | Error | Fatal
+[
+  {
+    "id": "SVC-RESTART",
+    "title": "Service restarted",
+    "pattern": "(service|server) (is )?(starting|restarted|shutting down)",
+    "severity": "Warning",
+    "recommendation": "Check whether the restart was planned; correlate with OS event log / journalctl."
+  },
+  {
+    "id": "LICENSE",
+    "title": "License problem",
+    "pattern": "licen[cs]e (expired|invalid|exceeded)",
+    "severity": "Error",
+    "recommendation": "Verify license status and capacity; request a new key if expired."
+  }
+]
