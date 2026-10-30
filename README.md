@@ -26,7 +26,7 @@ Built from my experience as a Senior Technical Support Engineer analyzing enterp
 Requirements: [.NET 8 SDK](https://dotnet.microsoft.com/download) (Windows, Linux or macOS).
 
 ```bash
-git clone https://github.com/<your-user>/LogLens.git
+git clone https://github.com/AKP-2185/LogLens.git
 cd LogLens
 dotnet run --project src/LogLens -- samples/sample-app.log --format all
 ```
